@@ -1,3 +1,5 @@
-.idea/
+.vscode/
 db.sqlite3
-virtualenv/
+venv/
+app/__pycache__/
+edoctor/__pycache__/
