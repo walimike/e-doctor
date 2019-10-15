@@ -9,7 +9,7 @@
 
 <body>
 
-    <form method="" action="">
+    <form onsubmit="submitForm()" method="" action="submitForm()">
         <table border="1" align="center" width="400" bgcolor="#CCCCCC">
             <caption>Registration form</caption>
             <tr>
@@ -19,27 +19,27 @@
             </tr>
             <tr>
                 <th>Enter your last name</th>
-                <td><input type="text" /></td>
+                <td><input type="text" required /></td>
             </tr>
             <tr>
                 <th>Enter your password</th>
-                <td><input type="password" /></td>
+                <td><input type="password" required/></td>
             </tr>
             <tr>
                 <th>ReEnter your password</th>
-                <td><input type="password" /></td>
+                <td><input type="password" required/></td>
             </tr>
             <tr>
                 <th>Enter your email</th>
-                <td><input type="email" /></td>
+                <td><input type="email" required/></td>
             </tr>
             <tr>
                 <th>Enter your mobile</th>
-                <td><input type="number" /></td>
+                <td><input type="number" required/></td>
             </tr>
             <tr>
                 <th>Enter your address</th>
-                <td><textarea rows="8" cols="20"></textarea></td>
+                <td><textarea rows="8" cols="20" required></textarea></td>
             </tr>
             <tr>
                 <th>Select your gender</th>
@@ -58,7 +58,7 @@
             </tr>
             <tr>
                 <th>Select your DOB</th>
-                <td><input type="date" /></td>
+                <td><input type="date" required/></td>
             </tr>
             <tr>
                 <th>Select your Country</th>
@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <th>Upload your pic</th>
-                <td><input type="file" /></td>
+                <td><input type="file" required/></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Save My Data" />
@@ -81,6 +81,8 @@
             </tr>
         </table>
     </form>
+    <button onclick="myScript()">Click me</button>
+    {% load static %}
+    <script src="{% static 'js/home.js' %}"></script>
 </body>
-
 </html>
