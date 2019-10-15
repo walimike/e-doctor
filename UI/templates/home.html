@@ -15,19 +15,22 @@
             <tr>
                 <th>Enter your first name</th>
                 <td><input type="text" name="fn" id="fn1" maxlength="10" title="enter your first name"
-                        placeholder="enter your first name" required /></td>
+                        placeholder="enter your first name" required/></td>
             </tr>
             <tr>
                 <th>Enter your last name</th>
-                <td><input type="text" required /></td>
+                <td><input type="text"  required/></td>
             </tr>
             <tr>
                 <th>Enter your password</th>
-                <td><input type="password" required/></td>
+                <td><input type="password" id="password" required/></td>
             </tr>
             <tr>
                 <th>ReEnter your password</th>
-                <td><input type="password" required/></td>
+                <td>
+                    <input type="password" id="re_enter_password" onblur="validatePassword()" required/>
+                    <span id='message'></span>
+                </td>
             </tr>
             <tr>
                 <th>Enter your email</th>
@@ -39,7 +42,7 @@
             </tr>
             <tr>
                 <th>Enter your address</th>
-                <td><textarea rows="8" cols="20" required></textarea></td>
+                <td><textarea rows="8" cols="20" ></textarea></td>
             </tr>
             <tr>
                 <th>Select your gender</th>
@@ -72,7 +75,7 @@
             </tr>
             <tr>
                 <th>Upload your pic</th>
-                <td><input type="file" required/></td>
+                <td><input type="file" /></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Save My Data" />
@@ -81,7 +84,6 @@
             </tr>
         </table>
     </form>
-    <button onclick="myScript()">Click me</button>
     {% load static %}
     <script src="{% static 'js/home.js' %}"></script>
 </body>
